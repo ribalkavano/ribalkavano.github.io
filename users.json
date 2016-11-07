@@ -1,0 +1,25 @@
+[ {
+		"id": "1",
+		"username": "John",
+		"birthday": "06.07.2008",
+		"city": "Budapest",
+		"active": true,
+		"boss":  false
+	},
+	{
+		"id": "2",
+		"username": "Mary",
+		"birthday": "01.02.2003",
+		"city": "Berlin",
+		"active": true,
+		"boss":  true
+	},
+	{
+		"id": "3",
+		"username": "James",
+		"birthday": "04.05.2006",
+		"city": "Vienna",
+		"active": false,
+		"boss":  false
+	}
+]
