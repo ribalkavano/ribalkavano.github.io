@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url("../fonts/Glyphicons/glyphicons-halflings-regular.eot");
+  src: url("../fonts/Glyphicons/glyphicons-halflings-regular.eot") format("embedded-opentype"), url("../fonts/Glyphicons/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/Glyphicons/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/Glyphicons/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/Glyphicons/glyphicons-halflings-regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  background-color: #fff; }
+
+.checkbox {
+  position: relative;
+  margin: -5px 0; }
+  .checkbox input[type=checkbox] {
+    display: none; }
+  .checkbox label:after {
+    content: '';
+    display: block;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #666666;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    position: absolute;
+    top: 5px;
+    left: 0; }
+  .checkbox input[type=checkbox]:checked + label:after {
+    background: url(http://www.iconsdb.com/icons/preview/gray/checkmark-xxl.png) 3px 2.3px no-repeat;
+    background-size: 14px; }
+
+.radio {
+  position: relative;
+  display: block;
+  margin: -5px 0; }
+  .radio input[type=radio] {
+    display: none; }
+  .radio label:after {
+    content: '';
+    display: block;
+    height: 20px;
+    width: 20px;
+    -webkit-box-shadow: 0 0 0.1px 1px #666666;
+            box-shadow: 0 0 0.1px 1px #666666;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 0; }
+  .radio input[type=radio]:checked + label:after {
+    border: 5px solid #fff;
+    -webkit-box-shadow: 0 0 0.1px 1px #666666;
+            box-shadow: 0 0 0.1px 1px #666666;
+    background-color: #666666; }
+
+.left .nav li {
+  width: 200px; }
+
+#main {
+  margin-left: 200px; }
+  #main .breadcrumb {
+    width: 500px; }
+    #main .breadcrumb li:before {
+      margin: 0 15px; }
+  #main .table tr:first-child {
+    background-color: #fdfdfd; }
+  #main .table tr:last-child {
+    border-bottom: 1px solid #dddddd; }
+  #main .simple_tb {
+    width: 200px; }
+    #main .simple_tb td {
+      padding: 8px;
+      padding-left: 20px; }
+      #main .simple_tb td:first-child {
+        text-align: right; }
+      #main .simple_tb td:last-child {
+        font-weight: bold; }
+  #main .btn {
+    width: 85px; }
+  #main .input-group {
+    margin-bottom: 10px; }
+  #main .button_save {
+    text-align: right;
+    margin-top: 40px; }
+
+.form {
+  width: 300px; }

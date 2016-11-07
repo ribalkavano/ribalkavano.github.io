@@ -1,0 +1,77 @@
+<div id="content">
+	<div id="" class="container-fluid">
+		<div class="row">
+			<div class="col-md-10">
+				<h1>Profile</h1>
+				<ol class="breadcrumb">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">User1</a></li>
+					<li><a href="#"><b>Profile</b></a></li>
+				</ol>
+				<hr>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<table class="simple_tb">
+						<tbody>
+							<tr>
+								<td>Name:</td>
+								<td><div id="username"></div></td>
+							</tr>
+							<tr>
+								<td>Birthday:</td>
+								<td><div id="birthday"></div></td>
+							</tr>
+							<tr>
+								<td>City:</td>
+								<td><div id="city"></div></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<a href="edit.html" id="edit_btn" class="btn btn-primary">Edit</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(document).ready(function() {
+
+		writeUserProfile();
+
+		function writeUserProfile() {
+			var userObj = JSON.parse(localStorage.getItem('User1'));
+
+			if(userObj == null) {
+				userObj = {username: "User1", birthday: "10.12.1990", city: "Los Angeles"};
+			}
+			$('.simple_tb td div').each(function() {
+				for (prop in userObj) {
+					if ($(this).attr('id') === prop) {
+						$(this).html(userObj[prop]);
+					}
+				}
+			});
+		}
+
+		$('#edit_btn').click(function(event){
+			event.preventDefault();
+			var href = $(this).attr('href');
+			window.location.hash = href.substr(0, href.length-5);
+			$("#main").html(loadContent);
+			function loadContent() {
+				$("#main").load(href);
+			};
+		});
+
+	});
+</script>
+
+

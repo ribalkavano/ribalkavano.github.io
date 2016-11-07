@@ -1,0 +1,46 @@
+ <div id="content">
+	<div id="" class="container-fluid">
+		<div class="row">
+			<div class="col-md-10">
+				<h1>Dashboard</h1>
+				<ol class="breadcrumb">
+					<li><a href="#">Home</a></li>
+					<li><a href="#"><b>User list</b></a></li>
+				</ol>
+				<hr>
+			</div>
+
+			<table class="table">
+				<tbody id="usersTable">
+					<tr>
+						<th>#</th>
+						<th>Username</th>
+						<th>Birthday</th>
+						<th>City</th>
+						<th>Active</th>
+						<th>Boss</th>
+					</tr>
+					
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+<script>
+	$.getJSON("users.json", function(user){
+		
+		for (var i = 0; i < user.length; i++) {
+
+			var newRow = $('<tr id=get_tr'+ i +'></tr>');
+			newRow.html('<td>' + user[i].id + '</td><td>' + user[i].username + '</td><td>' + user[i].birthday + '</td><td>' + user[i].city + '</td><td><div class="checkbox"><input type="checkbox" id="checkbox' + i + '"><label for="check' + i + '"></label></div></td><td><div class="radio"><input type="radio" name="radio_btn" id="radio' + i + '"><label for="radio' + i + '"></label></div></td>');
+
+			$('#usersTable tr:eq(' + (i+1) + ')').html("");
+			$('#usersTable').append(newRow);
+			
+			document.getElementById("checkbox" + i).checked = user[i].active;
+			document.getElementById("radio" + i).checked = user[i].boss;
+		}
+	});
+
+</script>

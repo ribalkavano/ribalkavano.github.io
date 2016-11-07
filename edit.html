@@ -1,0 +1,67 @@
+ 
+<div id="content">
+	<div id="" class="container-fluid">
+		<div class="row">
+			<div class="col-md-10">
+				<h1>Profile</h1>
+				<ol class="breadcrumb">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">User1</a></li>
+					<li><a href="#">Profile</a></li>
+					<li><a href="#"><b>Edit</b></a></li>
+				</ol>
+				<hr>
+			</div>
+			
+			<div class="form">
+				<form>
+					<div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+						<input type="text" id="username" class="form-control" placeholder="Username">
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+						<input type="text" id="birthday" class="form-control" placeholder="Birthday">
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+						<input type="text" id="city" class="form-control" placeholder="City">
+					</div>
+					<div class="button_save">
+						<button type="submit" id="save" class="btn btn-success">Save</button>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<script>
+	$(document).ready(function() {
+
+		$('#save').click(function(event) {
+			event.preventDefault();
+			var userObj = {};
+			$(".input-group :input").each(function() {
+				if (this.value !== "") {
+					userObj[$(this).attr('id')] = this.value;
+					this.value = "";
+				} else {
+					alert('empty fields!!');
+					return false;
+				}
+			})
+
+			if (Object.keys(userObj).length !== 0) {
+				localStorage.setItem('User1', JSON.stringify(userObj));
+				alert('success!');
+				$('#main').load('profile.html');
+			}
+
+
+		});
+	});
+
+</script>
+
