@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	
+	<title>sql_db</title>
+</head>
+<body>
+
+	<div class="pull-left">
+		<ul class="nav nav-pills nav-stacked">
+			<li class="active">
+				<a href="#" id="show_orders">Order List</a>
+			</li>
+			<li>
+				<a href="#" id="show_over500">Total Price >500</a>
+			</li>
+			<li>
+				<a href="#" id="show_samsung">Samsung Only</a>
+			</li>
+		</ul>
+	</div>
+
+<div class="table_wrapper container">
+	<h1>Order List</h1>
+	<table class="table table-striped">
+		<thead>
+			<tr class="info">
+				<th>Oredr ID</th>
+				<th>Shoping List</th>
+				<th>Date</th>
+				<th>Total Price</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr class="success">
+				<td>
+					<button id="add_btn" class="btn btn-success" style="width: 100%">Add List</button>
+				</td>
+				<td>
+					<div class='input-group'>
+						<input type="text" name="products" class="form-control" />
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-list-alt"></span>
+						</span>
+					</div>
+				</td>
+				<td>
+					<div class='input-group'>
+						<input type='date' name="date" class="form-control" />
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar"></span>
+						</span>
+					</div>
+				</td>
+				<td>
+					<div class='input-group'>
+						<input type="text" name="totalPrice" class="form-control" />
+						<span class="input-group-addon">$</span>
+					</div>
+				</td>
+			</tr>
+		</tfoot>
+		<tbody id="load_data">
+			
+		</tbody>
+	</table>
+</div>
+</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
