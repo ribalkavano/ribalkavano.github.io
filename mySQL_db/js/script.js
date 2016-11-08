@@ -23,13 +23,27 @@ $(document).ready(function() {
 				var resultObj = JSON.parse(result);
 				$.each(resultObj, function(key, val) {
 					var newRow = $('<tr>');
-					newRow.html('<td>' + val.ID + '</td><td>' + val.ShopingList + '</td><td>' + val.Date + '</td><td>' + val.TotalPrice + '</td>');
+					newRow.html('<td>' + val.ID + '</td><td>' + val.ShopingList + '</td><td>' + val.Date + '</td><td>' + val.TotalPrice + '</td><td><button type="button" id="' + val.ID + '" class="del-btn btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></td>');
 
 					dataHendler.append(newRow);
 				});
 			}
 		});
 	}
+
+	$(document).on("click", ".del-btn", function() {
+		var orderId = $(this).attr('id');
+
+		$.ajax({
+			type: "POST",
+			data: "orderId=" + orderId,
+			url: "delOrder.php",
+			success: function(result) {
+				loadList();
+			}
+		});
+
+	});
 
 	$('#add_btn').click(function() {
 		var products = $("[name='products']").val();

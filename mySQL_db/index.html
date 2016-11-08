@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 	<link type="text/css" rel="stylesheet" href="style.css">
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	
 	<title>sql_db</title>
 </head>
@@ -15,14 +16,14 @@
 
 	<div class="pull-left">
 		<ul class="nav nav-pills nav-stacked">
-			<li class="active">
-				<a href="#" id="show_orders">Order List</a>
+			<li id="getOrderList" class="active">
+				<a href="#">Order List</a>
 			</li>
-			<li>
-				<a href="#" id="show_over500">Total Price >500</a>
+			<li id="getOver500">
+				<a href="#">Total Price >500</a>
 			</li>
-			<li>
-				<a href="#" id="show_samsung">Samsung Only</a>
+			<li id="getSamsung">
+				<a href="#">Samsung Only</a>
 			</li>
 		</ul>
 	</div>
@@ -36,6 +37,7 @@
 				<th>Shoping List</th>
 				<th>Date</th>
 				<th>Total Price</th>
+				<th></th>
 			</tr>
 		</thead>
 		<tfoot>
@@ -65,6 +67,7 @@
 						<span class="input-group-addon">$</span>
 					</div>
 				</td>
+				<td></td>
 			</tr>
 		</tfoot>
 		<tbody id="load_data">
