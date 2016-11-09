@@ -14,73 +14,125 @@
 </head>
 <body>
 
-	<div class="pull-left">
-		<ul class="nav nav-pills nav-stacked">
-			<li id="getOrderList" class="active">
-				<a href="#">Order List</a>
-			</li>
-			<li id="getOver500">
-				<a href="#">Total Price >500</a>
-			</li>
-			<li id="getSamsung">
-				<a href="#">Samsung Only</a>
-			</li>
-		</ul>
+	<div class="table_wrapper container">
+		<div class="row">
+			<div class="col-md-8">
+				<h1>Product List</h1>
+				<table class="table table-striped">
+					<thead>
+						<tr class="info">
+							<th>ID</th>
+							<th>Name</th>
+							<th>Description</th>
+							<th>Price</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr class="success">
+							<td colspan="2">
+								<div class='input-group'>
+								<input type="text" name="productName" class="form-control"/>
+									<span class="input-group-addon">
+										<span class="glyphicon glyphicon-list-alt"></span>
+									</span>
+								</div>
+							</td>
+							<td>
+								<div class='input-group'>
+									<input type='text' name="description" class="form-control" />
+									<span class="input-group-addon">
+										<span class="glyphicon glyphicon-pencil"></span>
+									</span>
+								</div>
+							</td>
+							<td>
+								<div class='input-group'>
+									<input type="text" name="price" class="form-control" />
+									<span class="input-group-addon">$</span>
+								</div>
+							</td>
+							<td colspan="2">
+								<button id="add_toProductList" class="btn btn-success" style="width: 100%">New one</button>
+							</td>
+						</tr>
+					</tfoot>
+					<tbody id="load_products">
+
+					</tbody>
+				</table>
+			</div>
+
+			<div class="col-md-4 cart">
+				<div class="well well-lg">
+
+					<table class="table table-striped">
+						<thead>
+							<th>Name</th>
+							<th colspan="2">Price</th>
+						</thead>
+						<tfoot>
+							<tr>
+								<th>Total Price: </th>
+								<th id="total_price" colspan="2"></th>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<div class='input-group'>
+										<input type='date' name="date" class="form-control" />
+										<span class="input-group-addon">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+									</div>
+								</td>
+								<td>
+									<button id="add_order" class="btn btn-success" style="width: 100%">Add Order</button>
+								</td>
+							</tr>
+						</tfoot>
+						<tbody id="cart_body">
+
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+		</div>
+
+		<nav class="navbar">
+			<ul class="nav nav-tabs nav-justified">
+				<li id="getOrderList" class="active">
+					<a href="#">Order List</a>
+				</li>
+				<li id="getOver500">
+					<a href="#">Last week orders and price >500</a>
+				</li>
+				<li id="getSamsung">
+					<a href="#">Samsung Only</a>
+				</li>
+			</ul>
+		</nav>
+
+		<table class="table table-striped">
+			<thead>
+				<tr class="info">
+					<th>Oredr ID</th>
+					<th>Shoping List</th>
+					<th>Date</th>
+					<th colspan="2">Total Price</th>
+				</tr>
+			</thead>
+			<tbody id="load_data">
+
+			</tbody>
+		</table>
 	</div>
-
-<div class="table_wrapper container">
-	<h1>Order List</h1>
-	<table class="table table-striped">
-		<thead>
-			<tr class="info">
-				<th>Oredr ID</th>
-				<th>Shoping List</th>
-				<th>Date</th>
-				<th>Total Price</th>
-				<th></th>
-			</tr>
-		</thead>
-		<tfoot>
-			<tr class="success">
-				<td>
-					<button id="add_btn" class="btn btn-success" style="width: 100%">Add Order</button>
-				</td>
-				<td>
-					<div class='input-group'>
-						<input type="text" name="products" class="form-control" />
-						<span class="input-group-addon">
-							<span class="glyphicon glyphicon-list-alt"></span>
-						</span>
-					</div>
-				</td>
-				<td>
-					<div class='input-group'>
-						<input type='date' name="date" class="form-control" />
-						<span class="input-group-addon">
-							<span class="glyphicon glyphicon-calendar"></span>
-						</span>
-					</div>
-				</td>
-				<td>
-					<div class='input-group'>
-						<input type="text" name="totalPrice" class="form-control" />
-						<span class="input-group-addon">$</span>
-					</div>
-				</td>
-				<td></td>
-			</tr>
-		</tfoot>
-		<tbody id="load_data">
-			
-		</tbody>
-	</table>
-</div>
 </div>
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script src="js/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

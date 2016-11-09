@@ -1,8 +1,12 @@
-.nav li{
-	width: 200px;
+.nav a {
+	font-size: 1.2em;
 }
 
-.table_wrapper {
-	margin-left: 200px;
+.cart {
+	margin-top: 68px;
+}
+
+.del-product {
+	margin-left: 30px;
 }
 
