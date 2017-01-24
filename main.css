@@ -156,7 +156,7 @@ body {
 .about-me .about-photo {
   width: 250px;
   height: 250px;
-  background: url(http://rybalkaivan.com/img/me.jpg) no-repeat;
+  background: url(img/me.jpg) no-repeat;
   background-size: cover;
   border-radius: 50%;
 }
@@ -230,17 +230,17 @@ body {
 }
 
 .star {
-  background: url(http://rybalkaivan.com/img/starlingua.jpg) no-repeat;
+  background: url(img/starlingua.jpg) no-repeat;
   background-size: cover;
 }
 
 .fog {
-  background: url(http://rybalkaivan.com/img/fog.jpg) no-repeat;
+  background: url(img/fog.jpg) no-repeat;
   background-size: cover;
 }
 
 .new-one {
-  background: url(http://41.media.tumblr.com/tumblr_m8ruhiT5CL1rsxgl4o1_400.png) no-repeat;
+  background: url(http://www.dacostacoaching.co.uk/wp-content/uploads/2015/02/CompletedTask.jpg) no-repeat;
   background-size: cover;
 }
 
