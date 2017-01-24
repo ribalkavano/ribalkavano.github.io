@@ -1,0 +1,330 @@
+body {
+  position: relative;
+  overflow-y: scroll;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 30px 0;
+  color: #333333;
+}
+
+.title hr {
+  width: 50%;
+  border-top: 1px solid #333333;
+}
+
+.header {
+  width: 100%;
+  border-bottom: solid 1px #4c6154;
+  position: fixed;
+  z-index: 999;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.header.affix {
+  background-color: #4c6154;
+  border-bottom: none;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.header.affix .logo a {
+  color: #e7f5dd;
+}
+
+.header.affix .nav a {
+  color: #eef0f6;
+}
+
+.header .logo a {
+  text-decoration: none;
+  font-family: 'Kavoon', cursive;
+  color: #4c6154;
+}
+
+.header .nav-tabs li a {
+  margin: 0;
+  line-height: 0;
+  border: none !important;
+  background-color: inherit !important;
+}
+
+.header .nav {
+  border: none;
+}
+
+.header .nav .active a {
+  color: #e7f5dd;
+}
+
+.header .nav .active a:before {
+  visibility: visible;
+  transform: scaleX(0.8);
+}
+
+.header .nav li {
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.header .nav li a {
+  line-height: 5px;
+  color: #4c6154;
+}
+
+.header .nav li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  bottom: -8px;
+  left: 0;
+  background-color: #e7f5dd;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.header .nav li a:hover {
+  color: #e7f5dd;
+}
+
+.header .nav li a:hover:before {
+  visibility: visible;
+  transform: scaleX(0.8);
+}
+
+.banner {
+  padding: 50px 0;
+  background-color: #96d5ba;
+}
+
+.banner .hi-text {
+  margin-top: 150px;
+  color: #333333;
+  font-weight: bold;
+}
+
+.banner .contact-btn {
+  width: 250px;
+  margin-top: 150px;
+  text-transform: uppercase;
+}
+
+.social-links {
+  text-align: center;
+}
+
+.social-links ul {
+  margin: 0;
+  padding: 0;
+}
+
+.social-links li {
+  display: inline;
+}
+
+.social-links li a {
+  text-decoration: none;
+}
+
+.social-btn {
+  width: 65px;
+  height: 65px;
+  display: inline-block;
+  line-height: 72px;
+  border-radius: 50%;
+  border: 2px solid #333333;
+  color: #333333;
+  transition: all ease-out 0.5s;
+  margin: 50px 10px 0px 10px;
+}
+
+.social-btn:hover {
+  background-color: #333333;
+  color: #e7f5dd;
+  transition: all ease-out 0.5s;
+}
+
+.about-me {
+  padding-bottom: 50px;
+  background-color: #e7f5dd;
+}
+
+.about-me .about-photo {
+  width: 250px;
+  height: 250px;
+  background: url(http://rybalkaivan.com/img/me.jpg) no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.about-me .about-txt {
+  padding-left: 100px;
+}
+
+.about-me .about-txt span {
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #2d2139;
+  font-weight: bold;
+}
+
+.my-projects {
+  background-color: #c1dec3;
+  padding-bottom: 20px;
+}
+
+.my-projects a {
+  text-decoration: none;
+}
+
+.my-projects .project-name {
+  display: none;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 5px;
+  position: relative;
+  top: 260px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.my-projects .project-box-caption {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.my-projects .project-wrap {
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 23px -2px rgba(0, 0, 0, 0.9);
+  margin-bottom: 30px;
+  transition: all ease-out 0.5s;
+}
+
+.my-projects .project-wrap:hover .project-box-caption {
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all ease-out 0.3s;
+}
+
+.my-projects .project-wrap:hover .project-box-caption .project-name {
+  display: block;
+  color: #f9f4e7;
+}
+
+.my-projects .project-wrap .project-txt {
+  position: absolute;
+  top: 50px;
+  left: 46%;
+  margin-left: -80px;
+  color: #272822;
+  font-size: 30px;
+}
+
+.star {
+  background: url(http://rybalkaivan.com/img/starlingua.jpg) no-repeat;
+  background-size: cover;
+}
+
+.fog {
+  background: url(http://rybalkaivan.com/img/fog.jpg) no-repeat;
+  background-size: cover;
+}
+
+.new-one {
+  background: url(http://41.media.tumblr.com/tumblr_m8ruhiT5CL1rsxgl4o1_400.png) no-repeat;
+  background-size: cover;
+}
+
+img {
+  max-width: 100%;
+  height: 300px;
+}
+
+.contacts {
+  background-color: #67ab90;
+  padding-bottom: 50px;
+}
+
+.contacts .input-group {
+  margin-bottom: 10px;
+}
+
+.contacts .btn-size {
+  width: 100%;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.contacts .my-contacts {
+  font-size: 25px;
+}
+
+.contacts .social-links {
+  text-align: left;
+}
+
+.contacts .social-btn {
+  width: 50px;
+  height: 50px;
+  margin: 20px 15px 0 0;
+  font-size: 15px;
+  line-height: 58px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #0f4e73;
+  font-family: 'VT323', monospace;
+}
+
+.footer .copyright {
+  font-size: 15px;
+  margin: 10px 0;
+  color: #779dd6;
+}
+
+.footer .copyright a {
+  color: #f0d786;
+}
+
+@media only screen and (max-width: 768px) {
+  .logo {
+    text-align: center;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .about-me .about-photo {
+    position: relative;
+    left: 50%;
+    margin-left: -125px;
+    margin-bottom: 20px;
+  }
+
+  .about-me .about-txt {
+    padding-left: 10px;
+  }
+
+  .contacts .my-contacts {
+    text-align: center;
+  }
+
+  .contacts .social-links {
+    text-align: center;
+  }
+
+  .contacts .social-links .social-btn {
+    margin: 10px 15px 20px 0px;
+  }
+}
