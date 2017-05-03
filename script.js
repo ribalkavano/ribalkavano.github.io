@@ -15,25 +15,16 @@ $(document).ready(function() {
         offset: {
             top: 100
         }
+
     });
-
-   // Send Mail Form
-
-  $(".contact-form").submit(function() {
-    $.ajax({
-      type: "POST",
-      url: "mail.php",
-      data: $(this).serialize()
-    }).done(function() {
-      $(this).find("input").val("");
-      alert("Спасибо за заявку!");
-      $(".contact-form").trigger("reset");
-    });
-    return false;
-  });
-
-
 
 });
 
+function postFunc(){
+  if(submitted){
+    window.location='file:///Users/Vano/Desktop/my_projects/myPortolio/index.html#contacts';
+    $(".form-control").val('');
+    alert("Your message has been successfully sent");
+  }
+}
 

@@ -4,6 +4,107 @@ body {
   font-family: 'Work Sans', sans-serif;
 }
 
+/* Styles for dialog window */
+#small-dialog {
+  background: white;
+  padding: 20px 30px;
+  text-align: left;
+  max-width: 400px;
+  margin: 40px auto;
+  position: relative;
+}
+
+#cv-frame {
+  background: white;
+  padding: 20px 30px;
+  text-align: left;
+  height: 250px;
+  max-width: 600px;
+  margin: 40px auto;
+  position: relative;
+}
+
+.cv_img {
+  width: 130px;
+  height: 200px;
+  border: 2px solid #000;
+  border-radius: 21px;
+  background: url(cv/cv-img.png) no-repeat;
+  background-size: contain;
+  float: left;
+  margin-left: 30px;
+}
+
+.cv_img:hover{
+  background-color: black;
+  opacity: 0.6;
+}
+
+/**
+ * Fade-zoom animation for first dialog
+ */
+
+/* start state */
+.my-mfp-zoom-in .zoom-anim-dialog {
+  opacity: 0;
+
+  -webkit-transition: all 0.2s ease-in-out; 
+  -moz-transition: all 0.2s ease-in-out; 
+  -o-transition: all 0.2s ease-in-out; 
+  transition: all 0.2s ease-in-out; 
+
+
+
+  -webkit-transform: scale(0.8); 
+  -moz-transform: scale(0.8); 
+  -ms-transform: scale(0.8); 
+  -o-transform: scale(0.8); 
+  transform: scale(0.8); 
+}
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+  opacity: 1;
+
+  -webkit-transform: scale(1); 
+  -moz-transform: scale(1); 
+  -ms-transform: scale(1); 
+  -o-transform: scale(1); 
+  transform: scale(1); 
+}
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+  -webkit-transform: scale(0.8); 
+  -moz-transform: scale(0.8); 
+  -ms-transform: scale(0.8); 
+  -o-transform: scale(0.8); 
+  transform: scale(0.8); 
+
+  opacity: 0;
+}
+
+/* Dark overlay, start state */
+.my-mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out; 
+  -moz-transition: opacity 0.3s ease-out; 
+  -o-transition: opacity 0.3s ease-out; 
+  transition: opacity 0.3s ease-out;
+}
+/* animate in */
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+/* animate out */
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+/*
+===== END OF POPUP =====
+*/
+
 .title {
   text-transform: uppercase;
   text-align: center;
@@ -166,7 +267,7 @@ body {
 }
 
 .about-me .about-txt span {
-  font-size: 16px;
+  font-size: 18px;
   text-transform: uppercase;
   text-decoration: underline;
   color: #2d2139;
@@ -240,7 +341,7 @@ body {
 }
 
 .new-one {
-  background: url(http://www.dacostacoaching.co.uk/wp-content/uploads/2015/02/CompletedTask.jpg) no-repeat;
+  background: url(http://www.michiganbusinessnetwork.com/hs-fs/hubfs/images/software-762486_640.jpg?t=1493749653220&width=500&name=software-762486_640.jpg) no-repeat;
   background-size: cover;
 }
 
@@ -288,7 +389,7 @@ img {
 
 .footer .copyright {
   font-size: 15px;
-  margin: 10px 0px;
+  margin: 10px 0;
   color: #779dd6;
 }
 
